@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pepper_cloud_task/providers/task_provider.dart';
-import 'package:pepper_cloud_task/screens/add_task_screen.dart';
-import 'package:pepper_cloud_task/screens/splash_screen.dart';
-import 'package:pepper_cloud_task/screens/task_list_screen.dart';
+import 'package:pepper_cloud_task/providers/task/task_provider.dart';
+import 'package:pepper_cloud_task/screens/task/add_task_screen.dart';
+import 'package:pepper_cloud_task/screens/splash/splash_screen.dart';
+import 'package:pepper_cloud_task/screens/task/task_list_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => TaskProvider()..loadTasks(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Task Manager',
         theme: ThemeData(
           primarySwatch: Colors.teal,
